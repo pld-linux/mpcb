@@ -39,8 +39,6 @@ install -d $RPM_BUILD_ROOT{%{_sysconfdir}/X11/GNOME/CORBA/servers/,%{_datadir}/a
 install %{name}.gnorba $RPM_BUILD_ROOT%{_sysconfdir}/X11/GNOME/CORBA/servers/
 install %{name}.desktop $RPM_BUILD_ROOT%{_datadir}/applets/Utility/
 
-gzip -9nf AUTHORS ChangeLog NEWS README INSTALL mpcbrc.sample
-
 %find_lang %{name}
 
 %clean
@@ -48,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc AUTHORS ChangeLog NEWS README INSTALL mpcbrc.sample
 %attr(755,root,root) %{_bindir}/*
 %{_sysconfdir}/X11/GNOME/CORBA/servers/*
 %{_datadir}/applets/Utility/*
