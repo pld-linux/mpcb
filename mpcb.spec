@@ -19,7 +19,7 @@ X11 and Win32.
 
 %description -l pl
 Program do wspó³dzielenia "schowka" pomiêdzy wieloma stacjami, a nawet
-pomiêdzy X Window, a konsol± tekstow±. Istnieje w wersji dla UNIXów i
+pomiêdzy X Window, a konsol± tekstow±. Istnieje w wersji dla Uniksów i
 Win32.
 
 %prep
