@@ -9,6 +9,8 @@ Source0:	ftp://ftp.idata.sk/pub/common/%{name}-%{version}.tgz
 # Source0-md5:	f21bda5d809e18adac774c08a973710e
 URL:		http://www.idata.sk/~robo/mpcb/
 BuildRequires:	XFree86-devel
+BuildRequires:	glib-devel
+BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
@@ -26,7 +28,13 @@ Win32.
 %setup -q
 
 %build
-%configure2_13
+%{__aclocal}
+%{__autoconf}
+%{__automake}
+%configure \
+	--disable-gnome
+# where's applet-widget.h ?!
+
 %{__make}
 
 %install
