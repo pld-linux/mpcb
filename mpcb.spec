@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://ftp.idata.sk/pub/common/%{name}-%{version}.tgz
+# Source0-md5:	f21bda5d809e18adac774c08a973710e
 URL:		http://www.idata.sk/~robo/mpcb/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
