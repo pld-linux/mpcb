@@ -5,8 +5,6 @@ Version:	0.4.2
 Release:	1
 License:	GPL
 Group:		Applications/System
-Group(de):	Applikationen/System
-Group(pl):	Aplikacje/System
 Source0:	ftp://ftp.idata.sk/pub/common/%{name}-%{version}.tgz
 URL:		http://www.idata.sk/~robo/mpcb/
 BuildRequires:	XFree86-devel
