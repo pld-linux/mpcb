@@ -10,7 +10,6 @@ URL:		http://www.idata.sk/~robo/mpcb/
 BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Program for sharing clipboard over network between multiple stations
