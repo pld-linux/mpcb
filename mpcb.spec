@@ -9,10 +9,11 @@ Source0:	ftp://ftp.idata.sk/pub/common/%{name}-%{version}.tgz
 # Source0-md5:	f21bda5d809e18adac774c08a973710e
 URL:		http://www.idata.sk/~robo/mpcb/
 BuildRequires:	XFree86-devel
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	glib-devel
 BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Program for sharing clipboard over network between multiple stations
@@ -33,19 +34,19 @@ Win32.
 %{__automake}
 %configure \
 	--disable-gnome
-# where's applet-widget.h ?!
+# applet-widget.h - gnome-core-devel (GNOME1)
 
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_sysconfdir}/X11/GNOME/CORBA/servers,%{_datadir}/applets/Utility}
 
-install -d $RPM_BUILD_ROOT{%{_sysconfdir}/X11/GNOME/CORBA/servers/,%{_datadir}/applets/Utility/}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-%{__make} DESTDIR=$RPM_BUILD_ROOT install
-
-install %{name}.gnorba $RPM_BUILD_ROOT%{_sysconfdir}/X11/GNOME/CORBA/servers/
-install %{name}.desktop $RPM_BUILD_ROOT%{_datadir}/applets/Utility/
+install %{name}.gnorba $RPM_BUILD_ROOT%{_sysconfdir}/X11/GNOME/CORBA/servers
+install %{name}.desktop $RPM_BUILD_ROOT%{_datadir}/applets/Utility
 
 %find_lang %{name}
 
