@@ -1,5 +1,5 @@
 Summary:	MultiPlatform networked ClipBoard
-Summary(pl):	Przeno¶ny sieciowy schowek
+Summary(pl.UTF-8):   PrzenoÅ›ny sieciowy schowek
 Name:		mpcb
 Version:	0.4.2
 Release:	1
@@ -20,9 +20,9 @@ Program for sharing clipboard over network between multiple stations
 and even between X Window and Linux text console. Exist support for
 X11 and Win32.
 
-%description -l pl
-Program do wspó³dzielenia "schowka" pomiêdzy wieloma stacjami, a nawet
-pomiêdzy X Window, a konsol± tekstow±. Istnieje w wersji dla Uniksów i
+%description -l pl.UTF-8
+Program do wspÃ³Å‚dzielenia "schowka" pomiÄ™dzy wieloma stacjami, a nawet
+pomiÄ™dzy X Window, a konsolÄ… tekstowÄ…. Istnieje w wersji dla UniksÃ³w i
 Win32.
 
 %prep
