@@ -1,5 +1,5 @@
 Summary:	MultiPlatform networked ClipBoard
-Summary(pl.UTF-8):   Przenośny sieciowy schowek
+Summary(pl.UTF-8):	Przenośny sieciowy schowek
 Name:		mpcb
 Version:	0.4.2
 Release:	1
